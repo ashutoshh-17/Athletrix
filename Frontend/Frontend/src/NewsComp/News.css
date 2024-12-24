@@ -1,0 +1,134 @@
+.news-page {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Times New Roman', sans-serif;
+  
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  min-height: 100vh; /* Ensures the background spans the viewport */
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four items per row */
+  gap: 20px;
+  justify-content: center;
+}
+
+.news-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.read-more-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: green;
+}
+
+.news-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.new-news-message {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #333;
+  animation: slideIn 0.5s ease, fadeOut 3s ease 4s forwards;
+  z-index: 1000;
+}
+
+.bell-icon {
+  margin-right: 10px;
+  color: gold;
+  font-size: 1.5rem;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

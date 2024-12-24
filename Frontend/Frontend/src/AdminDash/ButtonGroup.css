@@ -1,0 +1,33 @@
+/* ButtonGroup.css */
+.btn-group {
+  display: flex;
+  margin-top: 5px;
+  float: right;
+  height: 40px;
+  width: auto;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 160px;  /* Set a fixed width for both buttons */
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-icon-left {
+  margin-right: 8px;
+}

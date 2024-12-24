@@ -1,0 +1,83 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Times New Roman',  Times New Roman, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.coach-dashboard {
+  padding: 20px;
+  color: #333;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.events-list {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.events-list h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.event-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.event-item:hover {
+  background-color: #f1f1f1;
+}
+
+.event-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.event-details {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.event-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.event-details li {
+  background: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}

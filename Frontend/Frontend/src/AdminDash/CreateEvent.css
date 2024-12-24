@@ -1,0 +1,120 @@
+/* Allow body to scroll only if absolutely necessary */
+body {
+  overflow-y: auto;
+  margin: 0;
+  height: 100vh; /* Ensure body takes up full height of the viewport */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container to center content and take full viewport height */
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Adjusts to the body height */
+  background-color: #f3f4f6;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevents internal scroll */
+}
+
+/* Form container with a cleaner look and no internal scrolling */
+.form-container {
+   background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 90%; /* Adjusts the maximum width to 90% of the viewport */
+    width: 100%; /* Ensures it scales down within the max-width */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 50px auto; /* Centers the container horizontally */
+}
+
+h1 {
+  font-size: 1.75rem;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Adjust form group styling for cleaner spacing */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* Input, Textarea, and Select styling */
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Button styling */
+.create-btn {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  color: #fff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.create-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  textarea,
+  select {
+    font-size: 0.85rem;
+  }
+
+  .create-btn {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+}

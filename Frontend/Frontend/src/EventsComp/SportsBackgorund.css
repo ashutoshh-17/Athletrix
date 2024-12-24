@@ -1,0 +1,34 @@
+.sports-background {
+  background: linear-gradient(135deg, rgba(255, 255, 200, 0.3), rgba(200, 255, 255, 0.3));
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.sports-background::before {
+  content: "🏀 ⚽ 🎾 🏈 🏆 🏅";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+  font-size: 24px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+  transform: rotate(-15deg);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: patternScroll 60s linear infinite;
+}
+
+@keyframes patternScroll {
+  from {
+    transform: rotate(-15deg) translateY(0);
+  }
+  to {
+    transform: rotate(-15deg) translateY(-50%);
+  }
+}

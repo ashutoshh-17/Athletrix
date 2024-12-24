@@ -1,0 +1,16 @@
+/* NavComp/Navbar.css */
+
+.navbar-title a {
+  text-decoration: none;  /* Removes underline */
+  color: inherit; 
+  font-family: 'Times New Roman', serif;
+}
+
+.navbar-title a:hover {
+  color: inherit;         /* Ensures color doesn't change on hover */
+}
+
+.logo {
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}

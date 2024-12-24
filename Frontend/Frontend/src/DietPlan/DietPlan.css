@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero1 Section */
+.hero1-section {
+  background-color: #00274d; /* Dark blue background */
+  color: #ffd700; /* Golden yellow text */
+  padding: 80px 20px; /* Increased padding to extend size */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero1-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.left-message,
+.right-message {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.vertical-line {
+  width: 2px; /* Straight vertical line */
+  height: 100%;
+  background-color: #ffd700; /* Golden yellow */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Headings */
+.head-h1 {
+  font-size: 2.2rem; /* Larger font size */
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  color: #ffd700;
+}
+
+.head-h1 span {
+  display: block;
+  font-size: 1.8rem; /* Slightly smaller for second line */
+  font-weight: normal;
+  color: #ffd700;
+}
+
+.p-1 {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ffd700;
+}
+
+/* Hero Images Below Text */
+.hero1-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between images */
+  margin-top: 30px; /* Space between text and images */
+  width: 100%;
+}
+
+.hero1-images img {
+  max-width: 200px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero1-images img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Tabs and Sport Selector */
+.tab-container {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.tabs {
+  margin-bottom: 15px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 2px solid #00274d;
+  background-color: white;
+  color: #00274d;
+  font-size: 1rem;
+  margin: 0 5px;
+  border-radius: 30px; /* Make them pill-shaped */
+  transition: all 0.3s ease;
+}
+
+.tab i {
+  margin-right: 8px; /* Add spacing for icons */
+}
+
+.tab.active-tab {
+  background-color: #00274d; /* Blue for selected tab */
+  color: white;
+}
+
+.tab:hover {
+  background-color: #00509e; /* Lighter blue on hover */
+  color: white;
+}
+
+.sport-selector {
+  margin-top: 10px;
+}
+
+.sport {
+  padding: 8px 15px;
+  border: 2px solid #00274d;
+  background-color: white;
+  color: #00274d;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0 5px;
+  border-radius: 30px; /* Make them pill-shaped */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sport.active-sport {
+  background-color: #00274d;
+  color: white;
+}
+
+.sport:hover {
+  background-color: #00509e; /* Lighter blue on hover */
+  color: white;
+}
+
+/* Plans Container */
+.plans-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plans-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #00274d;
+  position: relative;
+}
+
+.plans-container h2::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 3px;
+  background-color: #00274d; /* Line under Diet Plans heading */
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+/* Adjust color for Weight Plans */
+.plans-container h2.weight-plan::after {
+  background-color: #00509e; /* Blue for Weight Plans */
+}
+
+.plans ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plans li {
+  padding: 10px 0;
+}
+
+.plans li:last-child {
+  border-bottom: none;
+}
+
+strong {
+  color: #333;
+}
+
+/* Button Hover */
+.tab:hover,
+.sport:hover {
+  transform: translateY(-3px); /* Slight upward movement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.left-message:hover, .right-message:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease-in-out;
+}
